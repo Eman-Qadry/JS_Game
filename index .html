@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>من سيربح المليون</title>
 </head>
 <body>
@@ -13,18 +15,24 @@
     <div class="exit">EXIT</div>
     <div class="left_side">
         <div class="left_side_helpers">
-            <div class="helper1">
+            <div class="helper1" id="helper1">
                 <p>50:50</p>
+                <i class="fa-solid fa-xmark" id="red-x1"></i>
+            
             </div>
 
-            <div class="helper2">
+            <div class="helper2" id="helper2">
                 <img src="helper_2.png" alt="">
+                <i class="fa-solid fa-xmark" id="red-x2"></i>
             </div>
 
-            <div class="helper3">
+            <div class="helper3" id="helper3">
                 <img src="helper_3.png" alt="">
+                <i class="fa-solid fa-xmark" id="red-x3"></i>
+
             </div>
         </div>
+        <canvas id="opinion-chart"></canvas>
     </div>
 
     <ul class="right_side">
@@ -62,6 +70,10 @@
             </div>
     </div>
 </div>
+<audio id="bg-music" src="sounds/start.mp3" loop></audio>
+<audio id="correct-sound" src="sounds/movequestion.mp3"></audio>
+<audio id="wrong-sound" src="sounds/movequestion.mp3"></audio>
+<audio id="transition-sound" src="sounds/movequestion.mp3"></audio>
 
     <script src="script.js"></script>
 </body>

@@ -31,6 +31,7 @@ body{
     display: flex;
     gap: 15px;
     justify-content: center;
+    position: relative;
 }
 
 .helper1, .helper2, .helper3{
@@ -44,9 +45,29 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     font-size: 25px;
+    position: relative;
 }
-
+.helper1 i ,.helper2 i ,.helper3 i {
+    position: absolute;
+   /* Adjust as needed */
+    font-size: 180px;
+    color: red;
+   
+     display: none; /* Hidden by default */
+    
+  }
+  
+  .helper1.disallowed i{
+    display: block; /*show x icon*/
+  }
+  .helper2.disallowed i{
+    display: block; /*show x icon*/
+  }
+  .helper3.disallowed i{
+    display: block; /*show x icon*/
+  }
 .left_side_helpers img{
     width: 80px;
 }
@@ -145,5 +166,14 @@ ul li{
 
   
   .answers_top :hover ,.answers_bottom :hover{
-    background-color: brown;
+    background-color: rgb(171, 131, 131);
+  }
+  .deleted {
+    visibility: hidden; /* Hide the answer */
+    pointer-events: none; /* Disable clicks on the deleted answer */
+  }
+  
+  #opinion-chart{
+    width: 60%;
+    height: auto;
   }
